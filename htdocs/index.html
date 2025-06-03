@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio Fotográfico</title>
+  <link rel="stylesheet" href="\css\styles.css">
+  <style>
+    .portfolio-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .portfolio-figure {
+      width: 30%;
+      max-width: 300px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .portfolio-item {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      display: block;
+    }
+    .portfolio-figure figcaption {
+      margin-top: 8px;
+      font-size: 1em;
+      color: #444;
+      text-align: center;
+    }
+    .pagination-buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .pagination-buttons button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #ajudar img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header id="inicio">
+       <nav>
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li class="has-submenu">
+          <a href="#sobre">Sobre mim</a>
+          <ul class="submenu">
+            <li><a href="#ajudar">Ajudar o autor</a></li>
+            <li><a href="/cv/cv.html" target="_blank">Curriculum</a></li>
+          </ul>
+        </li>
+        <li><a href="#tecnicas">Técnicas Utilizadas</a></li>
+        <li><a href="#portofolio">Portfólio Fotográfico</a></li>
+        <li><a href="#calendario">Calendário de Exposições</a></li>
+        <li><a href="#redes">Redes Sociais</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
+    </nav>
+    <div class="banner">
+      <img src="upload/logotipo.png" alt="Logotipo" class="logo" style="height: 250px; width: auto;">
+      <h1>Portfólio Fotográfico</h1>
+    </div>
+  </header>
+
+<!-- imagem sobre mim -->
+<div style="text-align: center; margin: 20px 0;">
+  <img src="/upload/profile.png" alt="Minha Foto" style="height: 300px; width: auto; border-radius: 10px;">
+</div>
+
+<section id="sobre">
+  <div class="sobre-container">
+    <div>
+      <h2 style="text-align: center;">Sobre Mim</h2>
+      <p style="text-align: justify;">
+        Sou um contador de histórias visuais. O meu nome é Francisco Teixeira Pereira, e a fotografia é a minha forma de respirar o mundo. Cada clique é um encontro entre luz, sombra e emoção — uma tentativa de congelar o tempo e revelar o que, muitas vezes, passa despercebido.<br><P>
+        Desde muito jovem, encontrei na imagem um refúgio e uma forma de expressão. Meu olhar é movido pela curiosidade, pelo silêncio das paisagens, pelos rostos que contam histórias e pelas pequenas imperfeições que tornam tudo mais real. Meu trabalho navega entre o documental e o artístico, sempre em busca de autenticidade.<br><p>
+        Já fotografei projetos em ambientes urbanos e naturais, eventos culturais, retratos íntimos e experimentações com luz e movimento. Para mim, a fotografia é menos sobre a técnica e mais sobre a intenção.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="tecnicas">
+    <h2 style="text-align: center;">Técnicas Utilizadas</h2>
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
+      <div id="tabs" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 20px;">
+        <button onclick="showTab(0)" class="tab-button" style="padding: 10px 15px; border: none; border-radius: 5px; background-color: #444; color: white; cursor: pointer;">Luz Natural</button>
+        <button onclick="showTab(1)" class="tab-button" style="padding: 10px 15px; border: none; border-radius: 5px; background-color: #ddd; cursor: pointer;">Longa Exposição</button>
+        <button onclick="showTab(2)" class="tab-button" style="padding: 10px 15px; border: none; border-radius: 5px; background-color: #ddd; cursor: pointer;">Preto e Branco</button>
+        <button onclick="showTab(3)" class="tab-button" style="padding: 10px 15px; border: none; border-radius: 5px; background-color: #ddd; cursor: pointer;">Fotografia Documental</button>
+        <button onclick="showTab(4)" class="tab-button" style="padding: 10px 15px; border: none; border-radius: 5px; background-color: #ddd; cursor: pointer;">Manipulação Digital</button>
+        <button onclick="showTab(5)" class="tab-button" style="padding: 10px 15px; border: none; border-radius: 5px; background-color: #ddd; cursor: pointer;">Desfoque Criativo</button>
+        <button onclick="showTab(6)" class="tab-button" style="padding: 10px 15px; border: none; border-radius: 5px; background-color: #ddd; cursor: pointer;">Outra Técnica</button>
+      </div>
+      <div id="tab-content" style="background-color: #222; color: #fff; padding: 20px; border-radius: 10px;">
+        <div class="tab-pane">
+          <p><strong>Luz Natural:</strong> Aproveito ao máximo a iluminação ambiente para criar imagens com tons suaves e realistas, especialmente em retratos e cenas urbanas.</p>
+        </div>
+        <div class="tab-pane" style="display:none">
+          <p><strong>Longa Exposição:</strong> Ideal para paisagens noturnas, movimentos urbanos ou criar atmosferas surreais com luz e sombra.</p>
+        </div>
+        <div class="tab-pane" style="display:none">
+          <p><strong>Preto e Branco:</strong> Uma escolha estética que realça formas, emoções e contrastes. Costumo usá-la em retratos e projetos mais introspectivos.</p>
+        </div>
+        <div class="tab-pane" style="display:none">
+          <p><strong>Fotografia Documental:</strong> Capturo momentos espontâneos, cotidianos ou culturais com uma narrativa visual discreta, mas poderosa.</p>
+        </div>
+        <div class="tab-pane" style="display:none">
+          <p><strong>Manipulação Digital Leve:</strong> Uso softwares de edição para correções sutis de cor, contraste e composição, sempre respeitando a essência da imagem.</p>
+        </div>
+        <div class="tab-pane" style="display:none">
+          <p><strong>Desfoque Criativo (Bokeh):</strong> Utilizado para destacar o sujeito principal, criando uma atmosfera envolvente e poética.</p>
+        </div>
+        <div class="tab-pane" style="display:none">
+          <p><strong>Outra Técnica:</strong> Espaço reservado para futuras técnicas ou abordagens artísticas que venha a desenvolver.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.tab-button');
+      const panes = document.querySelectorAll('.tab-pane');
+      tabs.forEach((tab, i) => {
+        tab.style.backgroundColor = i === index ? '#444' : '#ddd';
+        tab.style.color = i === index ? 'white' : 'black';
+      });
+      panes.forEach((pane, i) => {
+        pane.style.display = i === index ? 'block' : 'none';
+      });
+    }
+  </script>
+
+
+<section id="redes" style="text-align: center; padding: 20px;">
+  <h2>Siga-nos nas redes sociais</h2>
+  <p>
+    <a href="redessociais/redessociais.html" title="YouTube" style="margin: 0 20px;">
+      <img src="/upload/logoyoutube.png" alt="YouTube" width="200">
+    </a>
+    <a href="redessociais/redessociais.html" title="Facebook" style="margin: 0 20px;">
+      <img src="/upload/logofacebook.png" alt="Facebook" width="200">
+    </a>
+    <a href="redessociais/redessociais.html" title="Instagram" style="margin: 0 20px;">
+      <img src="/upload/logo_instagram.png" alt="Instagram" width="200">
+    </a>
+    <a href="redessociais/redessociais.html" title="WhatsApp" style="margin: 0 20px;">
+      <img src="/upload/logowhatsapp.jpg" alt="WhatsApp" width="200">
+    </a>
+  </p>
+</section>
+
+
+  <!-- Imagem decorativa entre Redes Sociais e Ajudar o Autor -->
+  <div style="text-align: center; margin: 30px 0;">
+    <img src="/upload/imagem_site_1.jpg" alt="" style="max-width: 100%; height: auto; border-radius: 10px;">
+  </div>
+
+<section id="ajudar" style="text-align: center; padding: 20px;">
+  <h3 style="font-size: 24px; margin-bottom: 10px;">Ajudar o Autor</h3>
+  <p style="font-size: 16px; color: #555; margin-bottom: 20px;">
+    Se gosta dos meus projetos e quiser apoiar, qualquer contribuição é muito bem vinda. Obrigado!
+  </p>
+  <ul style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; list-style: none; padding: 0; margin: 0;">
+    <li style="display: flex; align-items: center; justify-content: center;">
+      <a href="/mbway/mbway.html">
+        <img src="/upload/mbway_help.jpg" alt="MBWAY" style="width: 100%; max-width: 600px; height: auto; vertical-align: middle; cursor: pointer;">
+      </a>
+    </li>
+  </ul>
+</section>
+
+
+
+  <section id="portofolio"> 
+    <div class="container">
+         <h2 style="text-align: center;">Portfólio</h2>
+           <div class="portfolio-grid" id="portfolioGrid">
+        <figure class="portfolio-figure">
+          <img src="/upload/1a.jpg" class="portfolio-item" alt="Portfólio 1" onclick="openPopup(this.src)">
+          <figcaption>Cadeiras pelo ar</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/2a.jpg" class="portfolio-item" alt="Portfólio 2" onclick="openPopup(this.src)">
+          <figcaption>Felicidade Matinal</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/3a.jpg" class="portfolio-item" alt="Portfólio 3" onclick="openPopup(this.src)">
+          <figcaption>Amigo para a vida</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/4a.jpg" class="portfolio-item" alt="Portfólio 4" onclick="openPopup(this.src)">
+          <figcaption>Milho e algodão Doce</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/5a.jpg" class="portfolio-item" alt="Portfólio 5" onclick="openPopup(this.src)">
+          <figcaption>Espetacular Salto</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/6a.jpg" class="portfolio-item" alt="Portfólio 6" onclick="openPopup(this.src)">
+          <figcaption>Quem Será</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/7a.jpg" class="portfolio-item" alt="Portfólio 7" onclick="openPopup(this.src)">
+          <figcaption>Raizes</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/8a.jpg" class="portfolio-item" alt="Portfólio 8" onclick="openPopup(this.src)">
+          <figcaption>Amarelo Puro</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/9a.jpg" class="portfolio-item" alt="Portfólio 9" onclick="openPopup(this.src)">
+          <figcaption>TAP em ceu Azul</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/11a.png" class="portfolio-item" alt="Portfólio 10" onclick="openPopup(this.src)">
+          <figcaption>Arte Rural</figcaption>
+        </figure>
+        <figure class="portfolio-figure">
+          <img src="/upload/12a.jpg" class="portfolio-item" alt="Portfólio 11" onclick="openPopup(this.src)">
+          <figcaption>Arte Urbana</figcaption>
+        </figure>
+      </div>
+      <div class="pagination-buttons">
+        <button onclick="showPage(-1)">Anterior</button>
+        <button onclick="showPage(1)">Seguinte</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Pmudar de pagina na galeria
+    const items = document.querySelectorAll('.portfolio-item');
+    let currentPage = 0;
+    const itemsPerPage = 3;
+    function showPage(direction) {
+      currentPage += direction;
+      const maxPage = Math.floor((items.length - 1) / itemsPerPage);
+      if (currentPage < 0) currentPage = 0;
+      if (currentPage > maxPage) currentPage = maxPage;
+      items.forEach((item, i) => {
+        item.parentElement.style.display = (i >= currentPage * itemsPerPage && i < (currentPage + 1) * itemsPerPage) ? 'flex' : 'none';
+      });
+    }
+    // Mostra a primeira página ao carregar
+    showPage(0);
+
+    // Função para abrir popup centralizado com a imagem
+    function openPopup(imgUrl) {
+      var largura = 900;
+      var altura = 700;
+      var esquerda = (screen.width - largura) / 2;
+      var topo = (screen.height - altura) / 2;
+      var popup = window.open('', '', 'width=' + largura + ',height=' + altura + ',left=' + esquerda + ',top=' + topo + ',resizable=1,scrollbars=1');
+      popup.document.write('<html><head><title>Foto</title></head><body style="margin:0; background:#222; display:flex; align-items:center; justify-content:center;"><img src="' + imgUrl + '" style="max-width:100%; max-height:100%; display:block; margin:auto; border-radius:8px;" alt="Foto" onclick="window.close()"></body></html>');
+      popup.document.close();
+    }
+  </script>
+
+  <section id="calendario">
+    <h2>Calendário de Exposições</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome da Exposição</th>
+          <th>Data</th>
+          <th>Local</th>
+          <th>Morada</th>
+          <th>Contactos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Exposição 1</td>
+          <td>10/07/2025</td>
+          <td>Galeria Central</td>
+          <td>Rua das Flores, 123</td>
+          <td><a href="#contactos">Contactar</a></td>
+        </tr>
+        <tr>
+          <td>Exposição Arte Urbana</td>
+          <td>22/08/2025</td>
+          <td>Espaço Jovem</td>
+          <td>Avenida da Liberdade, 456</td>
+          <td><a href="#contactos">Contactar</a></td>
+        </tr>
+        <tr>
+          <td>Mostra de Fotografia Contemporânea</td>
+          <td>15/09/2025</td>
+          <td>Centro Cultural</td>
+          <td>Praça do Município, 789</td>
+          <td><a href="#contactos">Contactar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  
+  <!-- Imagem decorativa antes de contactos -->
+  <div style="text-align: center; margin: 30px 0;">
+    <img src="/upload/2rodas.png" alt="" style="max-width: 100%; height: auto; border-radius: 10px;">
+  </div>
+
+  <section id="contactos">
+    <h2>Contactos</h2>
+    <div class="contact-container">
+      <div>
+        <h3>Onde estou</h3>
+        <p>Av. do Empresário, Campus da Talagueira, Zona do Lazer, 6000-767 Castelo Branco, Portugal</p>
+        <iframe src="https://maps.google.com/maps?q=Av.%20do%20Empres%C3%A1rio%2C%20Campus%20da%20Talagueira%2C%20Zona%20do%20Lazer%2C%206000-767%20Castelo%20Branco%2C%20Portugal&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen></iframe>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Telefone">
+        <textarea placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer style="background-color: #444; color: white; text-align: center; padding: 20px 10px; font-size: 14px;">
+    <p>© 2025 Portfólio Fotográfico. Francisco Teixeira Pereira.</p>
+    <p>
+      <a href="#inicio" style="color: #ddd; text-decoration: none; margin: 0 10px;">Início</a> |
+      <a href="#sobre" style="color: #ddd; text-decoration: none; margin: 0 10px;">Sobre Mim</a> |
+      <a href="#contactos" style="color: #ddd; text-decoration: none; margin: 0 10px;">Contactos</a>
+    </p>
+  </footer>
+</body>
+</html>
